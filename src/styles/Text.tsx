@@ -1,13 +1,13 @@
-import { styled } from '@/styles/stitches.config';
-import { colors } from '@/styles/Global'
+import { styled } from "@/styles/stitches.config";
+import { colors } from "@/styles/Global";
 
 const headingsDefaultConfig = {
-    fontFamily: "$titles"
-}
+    fontFamily: "$titles",
+};
 
 const bodyDefaultConfig = {
-    fontFamily: "$texts"
-}
+    fontFamily: "$texts",
+};
 
 export const Text = styled("p", {
     color: "$grey1",
@@ -22,38 +22,38 @@ export const Text = styled("p", {
                 ...headingsDefaultConfig,
                 "@mobile": {
                     fontSize: "$title1Mobile",
-                    lineHeight: "$title1Mobile"
-                }
+                    lineHeight: "$title1Mobile",
+                },
             },
             heading2: {
                 fontSize: "$title2",
                 lineHeight: "$title2",
                 fontWeight: 700,
-                ...headingsDefaultConfig
+                ...headingsDefaultConfig,
             },
             heading3: {
                 fontSize: "$title3",
                 lineHeight: "$title3",
                 fontWeight: 700,
-                ...headingsDefaultConfig
+                ...headingsDefaultConfig,
             },
             heading4: {
                 fontSize: "$title4",
                 lineHeight: "$title4",
                 fontWeight: 700,
-                ...headingsDefaultConfig
+                ...headingsDefaultConfig,
             },
             body1: {
                 fontSize: "$text1",
                 lineHeight: "$text1",
-                ...bodyDefaultConfig
+                ...bodyDefaultConfig,
             },
             body2: {
                 fontSize: "$text2",
                 lineHeight: "$text2",
-                ...bodyDefaultConfig
+                ...bodyDefaultConfig,
             },
         },
-        ...colors
-    }
-})
+        ...colors,
+    },
+});

@@ -16,98 +16,115 @@ import { FaGithub } from "react-icons/fa";
 
 // Page Style
 import {
-  Header,
-  HeaderContent,
-  HeaderButtonsArea,
-  UserImage,
-  StackCards,
-  ProjectsArea,
-  ProjectsAreaSocialMediaMessage,
-  ProjectAreaWrapperColumns,
-  ProjectsAreaContent,
+    Header,
+    HeaderContent,
+    HeaderButtonsArea,
+    UserImage,
+    StackCards,
+    ProjectsArea,
+    ProjectsAreaSocialMediaMessage,
+    ProjectAreaWrapperColumns,
+    ProjectsAreaContent,
 } from "./style";
 
 export const Home = (): JSX.Element => {
-  const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+    const gihubUrl = `https://github.com/${userData.githubUser}`;
+    const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
 
-  return (
-    <main id="home">
-      <Header>
-        <Container>
-          <HeaderContent>
-            <Flex>
-              <UserImage
-                src={`https://github.com/${userData.githubUser}.png`}
-                alt={userData.nameUser}
-                title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
-              />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
-            </Flex>
-            <Text as="h1" type="heading1" color="grey5">
-            I{" "}
-              <Text as="span" type="heading1" color="brand1">
-                love
-              </Text>{" "}
-              creating and{" "}
-              <Text as="span" type="heading1" color="brand1">
-                developing
-              </Text>{" "}
-              projects
-            </Text>
-            <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
-            </Text>
-            <HeaderButtonsArea>
-              <Button as="a" type="primary" href="#projects">
-                See Projects
-              </Button>
-              <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
-              </Button>
-              <Button
-                color="grey5"
-                as="a"
-                css={{ "&:hover": { color: "$grey1" } }}
-                type="circle"
-                target="_blank"
-                href={gihubUrl}
-              >
-                <FaGithub />
-              </Button>
-            </HeaderButtonsArea>
-            <StackCards>
-              {stackData.map((stack, index) => (
-                <Stack key={index} title={stack.title} icon={stack.img} />
-              ))}
-            </StackCards>
-          </HeaderContent>
-        </Container>
-      </Header>
-      <ProjectsArea id="projects">
-        <Container>
-          <ProjectAreaWrapperColumns>
-            <ProjectsAreaSocialMediaMessage>
-              <Text as="h2" type="heading4" color="grey4">
-                My projects
-              </Text>
-              <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
-                <Text as="span" color="brand5">
-                  side projects
-                </Text>
-              </Text>
-            </ProjectsAreaSocialMediaMessage>
-            <ProjectsAreaContent>
-              <Project />
-            </ProjectsAreaContent>
-          </ProjectAreaWrapperColumns>
-        </Container>
-      </ProjectsArea>
-      <Contacts />
-    </main>
-  );
+    return (
+        <main id="home">
+            <Header>
+                <Container>
+                    <HeaderContent>
+                        <Flex>
+                            <UserImage
+                                src={`https://github.com/${userData.githubUser}.png`}
+                                alt={userData.nameUser}
+                                title={userData.nameUser}
+                                width={"48px"}
+                                height={"48px"}
+                            />
+                            <Text color="grey4">
+                                Hello, my name is {userData.nameUser}
+                            </Text>
+                        </Flex>
+                        <Text as="h1" type="heading1" color="grey5">
+                            Desenvolvedor{" "}
+                            <Text as="span" type="heading1" color="brand1">
+                                Full-Stack
+                            </Text>{" "}
+                        </Text>
+                        <Text type="body1" color="grey2">
+                            SOBRE MIM:
+                        </Text>
+                        <Text type="body1" color="grey2">
+                            Como desenvolvedor web full-stack, sou especializado
+                            em criar aplicações web completas, desde a interface
+                            do usuário até a lógica de negócios do servidor. Eu
+                            tenho experiência em trabalhar com diversas
+                            tecnologias, incluindo HTML, CSS, JavaScript,
+                            frameworks como React e Typescript, e linguagens de
+                            programação como Node.js e Python.
+                        </Text>
+
+                        <HeaderButtonsArea>
+                            <Button as="a" type="primary" href="#projects">
+                                See Projects
+                            </Button>
+                            <Button
+                                as="a"
+                                type="outline"
+                                target="_blank"
+                                href={
+                                    "https://repository-emanuelluiz.vercel.app/"
+                                }
+                            >
+                                See my portfolio source code
+                            </Button>
+                            <Button
+                                color="grey5"
+                                as="a"
+                                css={{ "&:hover": { color: "$grey1" } }}
+                                type="circle"
+                                target="_blank"
+                                href={gihubUrl}
+                            >
+                                <FaGithub />
+                            </Button>
+                        </HeaderButtonsArea>
+                        <StackCards>
+                            {stackData.map((stack, index) => (
+                                <Stack
+                                    key={index}
+                                    title={stack.title}
+                                    icon={stack.img}
+                                />
+                            ))}
+                        </StackCards>
+                    </HeaderContent>
+                </Container>
+            </Header>
+            <ProjectsArea id="projects">
+                <Container>
+                    <ProjectAreaWrapperColumns>
+                        <ProjectsAreaSocialMediaMessage>
+                            <Text as="h2" type="heading4" color="grey4">
+                                My projects
+                            </Text>
+                            <Text as="p" type="body1" color="grey2">
+                                Some of my{" "}
+                                <Text as="span" color="brand5">
+                                    side projects
+                                </Text>
+                            </Text>
+                        </ProjectsAreaSocialMediaMessage>
+                        <ProjectsAreaContent>
+                            <Project />
+                        </ProjectsAreaContent>
+                    </ProjectAreaWrapperColumns>
+                </Container>
+            </ProjectsArea>
+            <Contacts />
+        </main>
+    );
 };
