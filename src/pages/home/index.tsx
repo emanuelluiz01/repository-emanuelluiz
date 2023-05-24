@@ -76,7 +76,7 @@ export const Home = (): JSX.Element => {
                                 type="outline"
                                 target="_blank"
                                 href={
-                                    "https://repository-emanuelluiz.vercel.app/"
+                                    "https://github.com/emanuelluiz01/repository-emanuelluiz"
                                 }
                             >
                                 See my portfolio source code
